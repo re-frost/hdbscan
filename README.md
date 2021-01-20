@@ -6,36 +6,6 @@ Written to run concurrently on CPU (uses all CPU cores by default).
 
 A re-write of code started by the brilliant developer Edouard Belval at https://github.com/Belval/hdbscan  ... although it has changed quite a lot from the original.
 
-## Use
-
-```go
-import(
-    "github.com/humilityai/hdbscan"
-)
-
-func main() {
-    data := [][]float64{
-        []float64{1,2,3},
-        []float64{3,2,1},
-    }
-    minimumClusterSize := len(data)
-    minimumSpanningTree := true
-
-    // create
-    clustering, err := hdbscan.NewClustering(data, minimumClusterSize)
-    if err != nil {
-        panic(err)
-    }
-
-    // options
-    clustering = clustering.Verbose().OutlierDetection()
-
-    //run
-    clustering.Run(hdbscan.EuclideanDistance, hdbscan.VarianceScore, minimumSpanningTree)
-
-    // If using sampling, then can use the Assign() method afterwards on the total dataset.
-}
-```
 
 ### options
 
