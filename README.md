@@ -6,10 +6,6 @@ Written to run concurrently on CPU (uses all CPU cores by default).
 
 A re-write of code started by the brilliant developer Edouard Belval at https://github.com/Belval/hdbscan  ... although it has changed quite a lot from the original.
 
-## Download
-
-`go get -u github.com/humilityai/hdbscan`
-
 ## Use
 
 ```go
