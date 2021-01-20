@@ -7,7 +7,7 @@ Written to run concurrently on CPU (uses all CPU cores by default).
 This repository uses the great hdbscan algorithm from Humility AI (https://github.com/humilityai/hdbscan.git) and has been extended with some features.
 Further description follows!
 
-### options
+### options for hdbscan clustering
 
 - `Verbose()` will log the progress of the clustering to stdout.
 - `Voronoi()` will add all points not placed in a cluster in the final clustering to their nearest cluster. All unassigned data points outliers will be added to their nearest cluster.
